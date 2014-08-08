@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :memes
+
   resources :templates
 
   # The priority is based upon order of creation: first created -> highest priority.

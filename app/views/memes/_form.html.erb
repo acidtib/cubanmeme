@@ -1,0 +1,33 @@
+<%= form_for(@meme) do |f| %>
+  <% if @meme.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@meme.errors.count, "error") %> prohibited this meme from being saved:</h2>
+
+      <ul>
+      <% @meme.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.text_field :image %>
+  </div>
+  <div class="field">
+    <%= f.label :caption_one %><br>
+    <%= f.text_field :caption_one %>
+  </div>
+  <div class="field">
+    <%= f.label :caption_two %><br>
+    <%= f.text_field :caption_two %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
